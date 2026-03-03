@@ -1,5 +1,8 @@
 <div>
   <h2>{{ raceModel().name }}</h2>
+
+  <p>Start: {{ raceModel().startInstant | date: 'short' }}</p>
+
   <ul>
     @for (pony of raceModel().ponies; track pony.id) {
       <li>
