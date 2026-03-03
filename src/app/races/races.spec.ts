@@ -1,22 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { page } from 'vitest/browser';
 import { Races } from './races';
 
+class RacesTester {
+  readonly fixture = TestBed.createComponent(Races);
+  readonly raceTitles = page.getByRole('heading', { level: 2 });
+}
+
 describe('Races', () => {
-  let component: Races;
-  let fixture: ComponentFixture<Races>;
+  beforeEach(() => TestBed.configureTestingModule({}));
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Races]
-    }).compileComponents();
+  it('should display every race', async () => {
+    const tester = new RacesTester();
 
-    fixture = TestBed.createComponent(Races);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    await expect.element(tester.raceTitles).toHaveLength(2);
+    await expect.element(tester.raceTitles.nth(0)).toHaveTextContent('Lyon');
+    await expect.element(tester.raceTitles.nth(1)).toHaveTextContent('London');
   });
 });

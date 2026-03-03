@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { RaceModel } from '../models/race-model';
 
 @Component({
   selector: 'pr-races',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './races.html',
   styleUrl: './races.css'
 })
-export class Races {}
+export class Races {
+  protected readonly races = signal<Array<RaceModel>>([
+    { id: 1, name: 'Lyon' },
+    { id: 2, name: 'London' }
+  ]);
+}
