@@ -10,7 +10,7 @@ import { PonyModel } from '../models/pony-model';
 export class Pony {
   readonly ponyModel = input.required<PonyModel>();
 
-  ponySelected = output<PonyModel>();
+  readonly ponySelected = output<PonyModel>();
 
   readonly ponyImageUrl = computed(() => `images/pony-${this.ponyModel().color.toLowerCase()}.gif`);
 

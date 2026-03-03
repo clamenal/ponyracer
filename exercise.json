@@ -1,1 +1,1 @@
-{"pack":"84","id":6,"title":"Using pipes","specs":[{"name":"src/app/race/race.spec.ts","hash":"8468d20eecd34ab87523363842eba6f6d42e59167eab61734b078e68e0d199c6"}]}
+{"pack":"84","id":7,"title":"Custom pipe with date-fns","specs":[{"name":"src/app/from-now-pipe.spec.ts","hash":"28f9d72770f4d9ca91e7d2951db67256af177b22c6ee8699118c0e25506c4b18"},{"name":"src/app/race/race.spec.ts","hash":"83b903411347aa764e441acdb0f63a1247fcd55aa95de062a3b7bff603868a0a"}]}
