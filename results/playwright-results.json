@@ -88,12 +88,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 201,
+                      "duration": 290,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-03-03T13:23:47.454Z",
+                      "startTime": "2026-03-04T13:48:11.451Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -122,12 +122,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 201,
+                      "duration": 292,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-03-03T13:23:47.430Z",
+                      "startTime": "2026-03-04T13:48:11.442Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -137,7 +137,7 @@
               ],
               "id": "e2caf6f5f0104c3eaa7f-733d8a887446e4614b69",
               "file": "home.e2e-spec.ts",
-              "line": 12,
+              "line": 14,
               "column": 7
             },
             {
@@ -156,12 +156,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 554,
+                      "duration": 564,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-03-03T13:23:47.408Z",
+                      "startTime": "2026-03-04T13:48:11.464Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -171,7 +171,7 @@
               ],
               "id": "e2caf6f5f0104c3eaa7f-a08f4f97b3dc9706228d",
               "file": "home.e2e-spec.ts",
-              "line": 17,
+              "line": 19,
               "column": 7
             }
           ]
@@ -207,12 +207,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 206,
+                      "duration": 297,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-03-03T13:23:47.425Z",
+                      "startTime": "2026-03-04T13:48:11.475Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -222,7 +222,7 @@
               ],
               "id": "d00a11b7894905e42f04-e41146bfc8539ce11a3a",
               "file": "races.e2e-spec.ts",
-              "line": 8,
+              "line": 41,
               "column": 7
             },
             {
@@ -241,12 +241,12 @@
                       "workerIndex": 4,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 213,
+                      "duration": 311,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-03-03T13:23:47.439Z",
+                      "startTime": "2026-03-04T13:48:11.475Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -256,7 +256,7 @@
               ],
               "id": "d00a11b7894905e42f04-14adc6b46aba0cae62c5",
               "file": "races.e2e-spec.ts",
-              "line": 15,
+              "line": 48,
               "column": 7
             }
           ]
@@ -266,8 +266,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-03-03T13:23:46.700Z",
-    "duration": 1514.6049999999998,
+    "startTime": "2026-03-04T13:48:10.731Z",
+    "duration": 1770.515,
     "expected": 5,
     "skipped": 0,
     "unexpected": 0,

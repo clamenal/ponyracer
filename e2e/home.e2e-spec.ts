@@ -7,11 +7,13 @@ test.describe('Home page', () => {
 
   test('should display a title', async ({ page }) => {
     await expect(page.locator('h1')).toContainText('Ponyracer');
+    await expect(page.locator('small')).toContainText('Always a pleasure to bet on ponies');
+    await expect(page.locator('.btn-primary').filter({ hasText: 'Races' })).toHaveAttribute('href', '/races');
   });
 
   test('should display a navbar', async ({ page }) => {
-    await expect(page.locator('.navbar-brand')).toContainText('PonyRacer');
-    await expect(page.locator('.nav-link')).toContainText('Races');
+    await expect(page.locator('.navbar-brand').filter({ hasText: 'PonyRacer' })).toHaveAttribute('href', '/');
+    await expect(page.locator('.nav-link').filter({ hasText: 'Races' })).toHaveAttribute('href', '/races');
   });
 
   test('should display a navbar collapsed on small screen', async ({ page }) => {

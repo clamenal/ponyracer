@@ -1,7 +1,8 @@
-import { Component, inject, signal } from '@angular/core';
-import { RaceModel } from '../models/race-model';
+import { Component, inject, Signal } from '@angular/core';
 import { Race } from '../race/race';
 import { RaceService } from '../race-service';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { RaceModel } from '../models/race-model';
 
 @Component({
   selector: 'pr-races',
@@ -10,12 +11,7 @@ import { RaceService } from '../race-service';
   styleUrl: './races.css'
 })
 export class Races {
-  //readonly races = signal<Array<RaceModel>>([]);
-  //constructor(private raceService: RaceService) {
-  //this.races.set(this.raceService.list());
-  //}
+  private readonly raceService = inject(RaceService);
 
-  private raceService = inject(RaceService);
-
-  protected readonly races = signal<Array<RaceModel>>(this.raceService.list());
+  protected readonly races: Signal<Array<RaceModel> | undefined> = toSignal(this.raceService.list());
 }

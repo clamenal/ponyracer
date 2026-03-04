@@ -1,32 +1,30 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { page } from 'vitest/browser';
 import { App } from './app';
 
 class AppTester {
   readonly fixture = TestBed.createComponent(App);
-  readonly title = page.getByRole('heading', { level: 1 });
   readonly menu = page.getByCss('pr-menu');
-  readonly races = page.getByCss('pr-races');
+  readonly routerOutlet = page.getByCss('router-outlet');
 }
 
 describe('App', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      providers: [provideRouter([])]
+    })
+  );
 
-  it('should have a title', async () => {
+  it('should have a router outlet', async () => {
     const tester = new AppTester();
 
-    await expect.element(tester.title).toHaveTextContent('Ponyracer');
+    await expect.element(tester.routerOutlet).toBeInTheDocument();
   });
 
   it('should display the menu component', async () => {
     const tester = new AppTester();
 
     await expect.element(tester.menu).toBeVisible();
-  });
-
-  it('should display the races component', async () => {
-    const tester = new AppTester();
-
-    await expect.element(tester.races).toBeVisible();
   });
 });

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Menu } from './menu/menu';
-import { Races } from './races/races';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'pr-root',
-  imports: [Menu, Races],
+  imports: [Menu, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

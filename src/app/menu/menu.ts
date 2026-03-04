@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'pr-menu',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './menu.html',
   styleUrl: './menu.css'
 })
