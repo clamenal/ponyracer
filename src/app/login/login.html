@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h1>Log in</h1>
+    <form (ngSubmit)="authenticate()" [formGroup]="form">
+      <div class="mb-3">
+        <label for="login" class="form-label">Login</label>
+        <input id="login" class="form-control" formControlName="login" />
+        @if (form.controls.login.touched && form.controls.login.hasError('required')) {
+          <div class="invalid-feedback">Login is required</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" class="form-control" formControlName="password" />
+        @if (form.controls.password.touched && form.controls.password.hasError('required')) {
+          <div class="invalid-feedback">Password is required</div>
+        }
+      </div>
+
+      @if (authenticationFailed()) {
+        <div class="alert alert-danger" role="alert">Nope, try again.</div>
+      }
+      <button class="btn btn-primary">Log me in!</button>
+    </form>
+  </div>
+</div>
